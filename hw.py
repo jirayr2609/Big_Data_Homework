@@ -1,7 +1,7 @@
 import pyspark
 if__name__=='__main__':
     sc=pyspark.SparkContext()
-    data = 'nyc_restaurants.csv'
+    data = '/data/share/bdm/nyc_restaurants.csv', use_unicode=False).cache()
     df=spark.read.load(data,
                   format = 'csv',
                   header=True,

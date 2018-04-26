@@ -8,6 +8,6 @@ if__name__=='__main__':
                   inferScheme=True).cache()
     cDescription = df.na.drop(subset=['CUISINE DESCRIPTION'])
     cDescription = cDescription.groupBy('CUISINE DESCRIPTION').count().sort('count',ascending = False)
-    print(cDescription)
+    
 
     cDescription.rdd.saveAstextFile('output') 

@@ -4,7 +4,7 @@ if __name__ == '__main__':
 	sc = SparkContext()
 
 	rest = sc.textFile('/data/share/bdm/nyc_restaurants.csv', use_unicode=False).cache()
-	# rest = sc.textFile('nyc_restaurants.csv', use_unicode=False).cache()
+	
 
 
 	def get_count(partId, records):
